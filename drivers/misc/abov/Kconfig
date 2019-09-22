@@ -1,0 +1,9 @@
+config INPUT_ABOV
+	tristate "ABOV SAR Driver"
+	default n
+	help
+	  Say Y here to enable ABOV SAR driver.
+
+	  To compile this driver as a module, choose M here. The module
+	  will be called abov_sar.
+
