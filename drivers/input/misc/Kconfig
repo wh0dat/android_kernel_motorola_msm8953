@@ -879,6 +879,8 @@ config INPUT_DRV2667_HAPTICS
 	  To compile this driver as a module, choose M here: the
 	  module will be called drv2667-haptics.
 
+source "drivers/input/misc/ets_fps_mmi/Kconfig"
+
 config INPUT_HISI_POWERKEY
 	tristate "Hisilicon PMIC ONKEY support"
 	depends on ARCH_HISI || COMPILE_TEST
