@@ -1,0 +1,10 @@
+config STMVL53L1
+        tristate "STM VL53L1 Ranging Sensor"
+        depends on I2C
+        help
+          Say Y here if you want to enable the key chord driver
+          This is a Time-of-Flight (ToF) laser-ranging sensor, provide
+          the distance from obstacle.
+
+          To compile this driver as a module, choose M here: the module will
+          be called vl53L1.

@@ -407,7 +407,6 @@ config INPUT_KEYCHORD
 	  To compile this driver as a module, choose M here: the
 	  module will be called keychord.
 
-
 config STMVL53L0X
         tristate "STM VL53L0X Ranging Sensor"
         depends on I2C
@@ -418,6 +417,8 @@ config STMVL53L0X
 
 	  To compile this driver as a module, choose M here: the module will
 	  be called vl5310x.
+
+source "drivers/input/misc/vl53L1/Kconfig"
 
 config INPUT_KEYSPAN_REMOTE
 	tristate "Keyspan DMR USB remote control"
