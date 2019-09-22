@@ -857,5 +857,6 @@ source "drivers/misc/fpr_FingerprintCard/Kconfig"
 source "drivers/misc/cypress/Kconfig"
 source "drivers/misc/aw869x/Kconfig"
 source "drivers/misc/mmi_sys_temp/Kconfig"
+source "drivers/misc/tps61280/Kconfig"
 
 endmenu
