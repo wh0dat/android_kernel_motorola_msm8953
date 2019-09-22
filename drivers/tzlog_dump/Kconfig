@@ -1,0 +1,8 @@
+config TZLOG_DUMP
+	tristate "TZLog Dump Driver"
+	default n
+	help
+	  Say Y here to enable the TimeZone LOG DUMP driver.
+
+	  To compile this driver as a module, choose M here. The module
+	  will be called tzlog_dump.
