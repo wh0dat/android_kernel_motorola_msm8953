@@ -72,6 +72,7 @@ obj-$(CONFIG_INPUT_AWINIC_HAPTIC) += aw8624/
 endif
 obj-$(CONFIG_MMI_SYSTEM_TEMP)	+= mmi_sys_temp/
 obj-$(CONFIG_TPS61280)		+= tps61280/
+obj-$(CONFIG_INPUT_ABOV)	+= abov/
 obj-$(CONFIG_HAPTIC_DRV2624)	+= drv2624_mmi/
 
 lkdtm-$(CONFIG_LKDTM)		+= lkdtm_core.o
