@@ -84,6 +84,24 @@ config ATMEL_TCB_CLKSRC_BLOCK
 	  TC can be used for other purposes, such as PWM generation and
 	  interval timing.
 
+config INPUT_AW8624_HAPTIC
+	tristate "AW8624 Haptic Driver"
+	default n
+	help
+	  Say Y here to enable awinic aw8624 haptic driver.
+
+	  To compile this driver as a module, choose M here. The module
+	  will be called aw8624.
+
+config INPUT_AW869X_HAPTIC
+	tristate "AW869X Haptic Driver"
+	default n
+	help
+	  Say Y here to enable awinic aw869x haptic driver.
+
+	  To compile this driver as a module, choose M here. The module
+	  will be called aw869x.
+
 config DUMMY_IRQ
 	tristate "Dummy IRQ handler"
 	default n
