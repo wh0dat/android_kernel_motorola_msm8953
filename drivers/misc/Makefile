@@ -70,6 +70,7 @@ endif
 ifeq ($(CONFIG_OCEAN_DTB),y)
 obj-$(CONFIG_INPUT_AWINIC_HAPTIC) += aw8624/
 endif
+obj-$(CONFIG_MMI_SYSTEM_TEMP)	+= mmi_sys_temp/
 
 lkdtm-$(CONFIG_LKDTM)		+= lkdtm_core.o
 lkdtm-$(CONFIG_LKDTM)		+= lkdtm_bugs.o
