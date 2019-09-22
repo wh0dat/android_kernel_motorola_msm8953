@@ -1,0 +1,8 @@
+config INPUT_AW8624_HAPTIC
+	tristate "AW8624 Haptic Driver"
+	default n
+	help
+	  Say Y here to enable awinic aw8624 haptic driver.
+
+	  To compile this driver as a module, choose M here. The module
+	  will be called aw8624.
