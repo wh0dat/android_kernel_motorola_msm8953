@@ -216,4 +216,6 @@ source "drivers/sensors/Kconfig"
 
 source "drivers/tee/Kconfig"
 
+source "drivers/tzlog_dump/Kconfig"
+
 endmenu
