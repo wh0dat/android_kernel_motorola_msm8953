@@ -1326,5 +1326,6 @@ config TOUCHSCREEN_NOVATEK_CHIPSET
 
 source "drivers/input/touchscreen/nova_mmi/Kconfig"
 source "drivers/input/touchscreen/himax_mmi/Kconfig"
+source "drivers/input/touchscreen/ilitek_mmi/Kconfig"
 
 endif
