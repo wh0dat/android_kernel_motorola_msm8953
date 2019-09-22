@@ -1,0 +1,9 @@
+
+config HAPTIC_DRV2624
+	tristate "MMI DRV2624 HAPTIC DRIVER"
+	default n
+	help
+	  Say Y here to enable the DRV2624 haptic driver.
+
+	  To compile this driver as a module, choose M here. The module
+	  will be called drv2624_mmi.
