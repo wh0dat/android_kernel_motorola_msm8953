@@ -1,0 +1,8 @@
+config MOTO_F_USBNET
+	tristate "MOTO F USBNET driver"
+	default n
+	help
+	  Say Y here to enable the INFO driver.
+
+	  To compile this driver as a module, choose M here. The module
+	  will be called moto_f_usbnet.
