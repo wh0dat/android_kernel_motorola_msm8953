@@ -160,6 +160,7 @@ obj-$(CONFIG_HYPERV)		+= hv/
 obj-$(CONFIG_PM_DEVFREQ)	+= devfreq/
 obj-$(CONFIG_EXTCON)		+= extcon/
 obj-$(CONFIG_MEMORY)		+= memory/
+obj-$(CONFIG_MMI_ANNOTATE)	+= mmi_annotate/
 obj-$(CONFIG_MMI_INFO)		+= mmi_info/
 obj-$(CONFIG_IIO)		+= iio/
 obj-$(CONFIG_VME_BUS)		+= vme/
