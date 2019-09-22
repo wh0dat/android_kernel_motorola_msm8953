@@ -1,0 +1,9 @@
+
+config TPS61280
+	tristate "TPS61280"
+	default n
+	help
+	  Say Y here to enable the TPS61280 battery driver.
+
+	  To compile this driver as a module, choose M here. The module
+	  will be called tps61280.
