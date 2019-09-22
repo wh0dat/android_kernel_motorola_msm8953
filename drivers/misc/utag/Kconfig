@@ -1,0 +1,9 @@
+config MOT_UTAGS
+	tristate "MOT UTAGS Driver"
+	default n
+	help
+	  Say Y here to enable MOT UTAGS driver.
+
+	  To compile this driver as a module, choose M here. The module
+	  will be called utags.
+
