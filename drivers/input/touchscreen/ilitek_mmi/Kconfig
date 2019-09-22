@@ -1,0 +1,15 @@
+#
+# ILITEK touchscreen driver configuration
+#
+config CONFIG_TOUCHSCREEN_ILITEK_CHIPSET
+	tristate "ILITEK Touchscreen driver"
+	help
+	  Say Y here if you have a ILITEK touchscreen connected
+	  to your system.
+
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called ilitek.
+
+endif
