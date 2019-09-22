@@ -64,6 +64,14 @@ obj-$(CONFIG_MEMORY_STATE_TIME)	+= memory_state_time.o
 obj-$(CONFIG_UID_SYS_STATS)	+= uid_sys_stats.o
 obj-$(CONFIG_MEMORY_STATE_TIME)	+= memory_state_time.o
 
+ifeq ($(CONFIG_RIVER_DTB),y)
+obj-$(CONFIG_INPUT_AWINIC_HAPTIC) += aw869x/
+endif
+ifeq ($(CONFIG_OCEAN_DTB),y)
+obj-$(CONFIG_INPUT_AWINIC_HAPTIC) += aw8624/
+endif
+obj-$(CONFIG_MMI_SYSTEM_TEMP)	+= mmi_sys_temp/
+
 lkdtm-$(CONFIG_LKDTM)		+= lkdtm_core.o
 lkdtm-$(CONFIG_LKDTM)		+= lkdtm_bugs.o
 lkdtm-$(CONFIG_LKDTM)		+= lkdtm_heap.o
