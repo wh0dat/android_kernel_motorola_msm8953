@@ -82,6 +82,8 @@ source "drivers/watchdog/Kconfig"
 
 source "drivers/watchdog_cpu_ctx/Kconfig"
 
+source "drivers/watchdog_test/Kconfig"
+
 source "drivers/ssb/Kconfig"
 
 source "drivers/bcma/Kconfig"
