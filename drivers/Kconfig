@@ -80,6 +80,8 @@ source "drivers/thermal/Kconfig"
 
 source "drivers/watchdog/Kconfig"
 
+source "drivers/watchdog_cpu_ctx/Kconfig"
+
 source "drivers/ssb/Kconfig"
 
 source "drivers/bcma/Kconfig"

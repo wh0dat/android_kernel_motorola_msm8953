@@ -1,0 +1,10 @@
+
+#
+# Watchdog device configuration
+#
+
+config WATCHDOG_CPU_CTX
+	tristate "WatchDog CPU Context Driver"
+	---help---
+	  Say Y here if you want to use the new watchdog cpu ctx driver.
+	  This driver provides cpu context support to watchdog.
