@@ -440,3 +440,59 @@ obj-$(CONFIG_SND_SOC_WM_HUBS)	+= snd-soc-wm-hubs.o
 obj-$(CONFIG_SND_SOC_MAX9877)	+= snd-soc-max9877.o
 obj-$(CONFIG_SND_SOC_MAX98504)	+= snd-soc-max98504.o
 obj-$(CONFIG_SND_SOC_TPA6130A2)	+= snd-soc-tpa6130a2.o
+
+# Moto
+#
+#cirrus_cs35l35-objs = cs35l35.o
+#obj-y += cirrus_cs35l35.o
+#cirrus_cs35l36-objs = cs35l36.o cs35l36-tables.o
+#obj-y += cirrus_cs35l36.o
+#cirrus_cs47l90-objs =  cs47l90.o
+#obj-y += cirrus_cs47l90.o
+
+##### RIVER - MADERA #####
+ifeq ($(CONFIG_RIVER_DTB),y)
+EXTRA_CFLAGS += -DCONFIG_SND_SOC_AOV_TRIGGER
+EXTRA_CFLAGS += -DCONFIG_TAS2560_REGMAP -DCONFIG_TAS2560_CODEC -DCONFIG_TAS2560_MISC -DCONFIG_SND_SOC_TAS2560
+obj-y += aov_trigger.o
+cirrus_madera-objs = madera.o madera-slimbus.o
+obj-y += cirrus_madera.o
+cirrus_wm_adsp-objs = wm_adsp.o
+obj-y += cirrus_wm_adsp.o
+cirrus_cs35l41-objs = cs35l41.o cs35l41-tables.o
+
+ifneq ($(filter m y,$(CONFIG_SND_SOC_CS35L41_SPI)),)
+   cirrus_cs35l41-objs += cs35l41-spi.o
+else
+   cirrus_cs35l41-objs += cs35l41-i2c.o
+endif
+obj-y += cirrus_cs35l41.o
+
+cirrus_cs47l35-objs =  cs47l35.o
+obj-y += cirrus_cs47l35.o
+
+cirrus_playback-objs = msm-cirrus-playback.o
+obj-y += cirrus_playback.o
+endif
+
+###### OCEAN #####
+ifeq ($(CONFIG_SND_SOC_TFA9874),y)
+snd_soc_tfa9874-objs += tfa98xx.o
+snd_soc_tfa9874-objs += tfa_container.o
+snd_soc_tfa9874-objs += tfa_dsp.o
+snd_soc_tfa9874-objs += tfa_init.o
+ifdef TFA_DEBUG
+EXTRA_CFLAGS += -DTFA_DEBUG -DDEBUG
+snd_soc_tfa9874-objs += tfa_debug.o
+endif
+obj-y += snd_soc_tfa9874.o
+endif
+
+ifeq ($(CONFIG_SND_SOC_TAS2560),y)
+tas2560-objs = tas2560-core.o tas2560-misc.o tas2560-codec.o tas2560-regmap.o
+obj-y += tas2560.o
+tas2560_algo-objs = tas2560-algo.o
+obj-y += tas2560_algo.o
+tas2560_calib-objs = tas2560-calib.o
+obj-y += tas2560_calib.o
+endif
