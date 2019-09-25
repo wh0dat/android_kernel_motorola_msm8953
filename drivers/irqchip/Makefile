@@ -15,6 +15,14 @@ obj-$(CONFIG_ARCH_S3C24XX)		+= irq-s3c24xx.o
 obj-$(CONFIG_DW_APB_ICTL)		+= irq-dw-apb-ictl.o
 obj-$(CONFIG_METAG)			+= irq-metag-ext.o
 obj-$(CONFIG_METAG_PERFCOUNTER_IRQS)	+= irq-metag.o
+ifeq ($(CONFIG_ARCH_SDM450), y)
+EXTRA_CFLAGS += -DCONFIG_MADERA_IRQ_CS47L35
+cirrus_irq-madera-objs = irq-madera.o irq-madera-cs47l35.o
+else
+EXTRA_CFLAGS += -DCONFIG_MADERA_IRQ_CS47L90
+cirrus_irq-madera-objs = irq-madera.o irq-madera-cs47l90.o
+endif
+obj-$(CONFIG_MFD_MADERA)		+= cirrus_irq-madera.o
 obj-$(CONFIG_ARCH_MOXART)		+= irq-moxart.o
 obj-$(CONFIG_CLPS711X_IRQCHIP)		+= irq-clps711x.o
 obj-$(CONFIG_OR1K_PIC)			+= irq-or1k-pic.o

@@ -143,6 +143,14 @@ config REGULATOR_ARIZONA
 	  Support for the regulators found on Wolfson Arizona class
 	  devices.
 
+config REGULATOR_MADERA
+	tristate "Cirrus Madera class devices"
+	depends on MFD_MADERA
+	depends on SND_SOC
+	help
+	  Support for the regulators found on Cirrus Logic Madera
+	  codecs.
+
 config REGULATOR_AS3711
 	tristate "AS3711 PMIC"
 	depends on MFD_AS3711
