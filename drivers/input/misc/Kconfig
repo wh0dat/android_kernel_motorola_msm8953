@@ -418,6 +418,7 @@ config STMVL53L0X
 	  To compile this driver as a module, choose M here: the module will
 	  be called vl5310x.
 
+source "drivers/input/misc/vl53L0/Kconfig"
 source "drivers/input/misc/vl53L1/Kconfig"
 
 config INPUT_KEYSPAN_REMOTE
