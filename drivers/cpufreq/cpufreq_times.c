@@ -39,11 +39,6 @@ struct concurrent_times {
 	atomic64_t policy[NR_CPUS];
 };
 
-struct concurrent_times {
-	atomic64_t active[NR_CPUS];
-	atomic64_t policy[NR_CPUS];
-};
-
 struct uid_entry {
 	uid_t uid;
 	unsigned int max_state;
