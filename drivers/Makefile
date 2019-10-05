@@ -164,7 +164,6 @@ obj-$(CONFIG_EXTCON)		+= extcon/
 obj-$(CONFIG_MEMORY)		+= memory/
 obj-$(CONFIG_MMI_ANNOTATE)	+= mmi_annotate/
 obj-$(CONFIG_MMI_INFO)		+= mmi_info/
-obj-$(CONFIG_MOTO_F_USBNET)	+= moto_f_usbnet/
 obj-$(CONFIG_IIO)		+= iio/
 obj-$(CONFIG_VME_BUS)		+= vme/
 obj-$(CONFIG_IPACK_BUS)		+= ipack/

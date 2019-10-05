@@ -172,8 +172,6 @@ source "drivers/mmi_annotate/Kconfig"
 
 source "drivers/mmi_info/Kconfig"
 
-source "drivers/moto_f_usbnet/Kconfig"
-
 source "drivers/iio/Kconfig"
 
 source "drivers/ntb/Kconfig"
