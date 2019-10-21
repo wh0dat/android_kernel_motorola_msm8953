@@ -11811,6 +11811,7 @@ static void __hdd_set_multicast_list(struct net_device *dev)
                MAC_ADDR_ARRAY(pAdapter->mc_addr_list.addr[i]));
          i++;
       }
+
    }
 
    if (pHddCtx->hdd_wlan_suspended)

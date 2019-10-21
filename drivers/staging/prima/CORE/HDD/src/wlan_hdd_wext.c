@@ -179,6 +179,10 @@ static const hdd_freq_chan_map_t freq_chan_map[] = { {2412, 1}, {2417, 2},
 #define  WE_SET_MODULATED_DTIM    26
 #define WLAN_SET_DYNNAMIC_AGGREGATION 27
 
+// BEGIN IKSWM-15907, Motorola, w18918
+#define WE_SET_CHANNEL_RANGE 90
+// END IKSWM-15907, Motorola, w18918
+
 /* Private ioctls and their sub-ioctls */
 #define WLAN_PRIV_SET_NONE_GET_INT    (SIOCIWFIRSTPRIV + 1)
 #define WE_GET_11D_STATE     1
@@ -11124,6 +11128,11 @@ static const struct iw_priv_args we_private_args[] = {
         IW_PRIV_TYPE_INT | IW_PRIV_SIZE_FIXED | 1,
         0,
         "setTmLevel" },
+
+    {   WE_SET_CHANNEL_RANGE,
+        IW_PRIV_TYPE_INT | IW_PRIV_SIZE_FIXED | 1,
+        0,
+        "setChannelRange" },
 
     {   WE_ENABLE_STRICT_FCC_REG,
         IW_PRIV_TYPE_INT | IW_PRIV_SIZE_FIXED | 1,
