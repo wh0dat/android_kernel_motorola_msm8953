@@ -469,5 +469,6 @@ int hdd_setBand(struct net_device *dev, u8 ui_band);
 int hdd_setBand_helper(struct net_device *dev, const char *command);
 VOS_STATUS wlan_hdd_get_frame_logs(hdd_adapter_t *pAdapter, v_U8_t flag);
 int wlan_hdd_set_proximity(int set_value, tHalHandle hal);
+
 #endif // __WEXT_IW_H__
 
