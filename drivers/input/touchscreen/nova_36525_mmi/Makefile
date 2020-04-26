@@ -4,7 +4,7 @@
 
 # Each configuration option enables a list of files.
 
-obj-$(CONFIG_TOUCHSCREEN_NT36525) += nova_36525_mmi.o 
+obj-$(CONFIG_TOUCHSCREEN_NOVATEK_CHIPSET) += nova_36525_mmi.o
 nova_36525_mmi-objs += nt36xxx.o
 nova_36525_mmi-objs += nt36xxx_ext_proc.o
 nova_36525_mmi-objs += nt36xxx_fw_update.o
